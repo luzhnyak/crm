@@ -27,18 +27,18 @@ const Sidebar = () => {
         />
         <ul className="space-y-7">
           <SidebarItem
-            current={pathname === "/companies"}
-            pathname="/companies"
-            alt="companies icon"
+            current={pathname === "/dashboard"}
+            pathname="/dashboard"
+            alt="dashboard icon"
             src="/icons/squares.svg"
           >
             Dashboard
           </SidebarItem>
 
           <SidebarItem
-            current={pathname === "/dashboard"}
-            pathname="/dashboard"
-            alt="dashboard icon"
+            current={pathname === "/companies"}
+            pathname="/companies"
+            alt="companies icon"
             src="/icons/briefcase.svg"
           >
             Comapanies

@@ -4,3 +4,23 @@
 
 body {
 }
+
+.styles_gradient__aOak5 {
+  background-size: cover;
+}
+
+.styles_gradient__aOak5:nth-child(4n + 1) {
+  background-image: url(/images/mesh-gradient-1.svg);
+}
+
+.styles_gradient__aOak5:nth-child(4n + 2) {
+  background-image: url(/images/mesh-gradient-2.svg);
+}
+
+.styles_gradient__aOak5:nth-child(4n + 3) {
+  background-image: url(/images/mesh-gradient-3.svg);
+}
+
+.styles_gradient__aOak5:nth-child(4n + 4) {
+  background-image: url(/images/mesh-gradient-4.svg);
+}
