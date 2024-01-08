@@ -10,7 +10,7 @@ export enum Status {
 interface IProps {
   children: React.ReactNode;
   status: Status;
-  disabled: boolean;
+  disabled?: boolean;
 }
 
 const StatusLabel: React.FC<IProps> = ({ children, status, disabled }) => {

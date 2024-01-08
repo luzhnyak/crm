@@ -1,10 +1,10 @@
 import React from "react";
-import StatusLabel, { Status } from "../components/StatusLabel";
+import StatusLabel, { Status } from "../../components/StatusLabel";
 
 const page = () => {
   return (
     <div>
-      <h1>Companies</h1>
+      <h1>Dashboard</h1>
       <StatusLabel status={Status.Active}>Active</StatusLabel>
       <StatusLabel status={Status.NotActive}>NotActive</StatusLabel>
       <StatusLabel status={Status.Pending}>Pending</StatusLabel>
