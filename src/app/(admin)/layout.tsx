@@ -3,18 +3,14 @@ import Sidebar from "../components/Sidebar";
 import Header from "../components/Header";
 
 interface IProps {
-  title: string;
   children: ReactNode;
 }
 
-const layout: FC<IProps> = ({ title, children }) => {
+const layout: FC<IProps> = ({ children }) => {
   return (
     <>
       <Sidebar />
-      <div className="ml-60">
-        <Header>{title}</Header>
-        {children}
-      </div>
+      <div className="ml-60">{children}</div>
     </>
   );
 };

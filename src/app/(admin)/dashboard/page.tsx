@@ -1,11 +1,8 @@
+import Header from "@/app/components/Header";
 import React from "react";
 
 const page = () => {
-  return (
-    <div>
-      <h1>Dashboard</h1>
-    </div>
-  );
+  return <Header>Dashboard</Header>;
 };
 
 export default page;
