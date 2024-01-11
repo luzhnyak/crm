@@ -1,38 +1,7 @@
 import React from "react";
 import StatusLabel, { Status } from "../../components/StatusLabel";
 import Header from "@/app/components/Header";
-import Country from "../../../models/country";
-import Company from "../../../models/company";
-import mongoose from "mongoose";
-
-const MONGODB_URI =
-  "mongodb+srv://luzhnyak:d4pwBIC7Q70BxyGa@luzhnyak.lhqrfpl.mongodb.net/crm?retryWrites=true&w=majority";
-
-let client;
-
-const DBConected = async () => {
-  try {
-    client = await mongoose.connect(MONGODB_URI);
-    console.log("DB connected");
-    // const c = await Country.find({});
-    await Company.create({
-      category: "category 1",
-      company: "company 1",
-      status: "Active",
-      promotion: "String",
-      country: "Ukraine",
-      joined_date: new Date(),
-    });
-
-    const companies = await Company.find({});
-
-    console.log(companies);
-  } catch (error) {
-    console.log("There was an error connection to the DB", error);
-  }
-};
-
-DBConected();
+import Table from "@/app/components/Table";
 
 const page = async () => {
   return (
@@ -68,31 +37,7 @@ const page = async () => {
           </button>
         </div>
         <div className="py-8 px-10 bg-gray-100">
-          <table className="table-auto w-full border-separate border-spacing-y-2">
-            <thead>
-              <tr>
-                <th className="pb-5 text-sm font-light text-gray-900">
-                  Category
-                </th>
-                <th className="pb-5 text-sm font-light text-gray-900">
-                  Company
-                </th>
-                <th className="pb-5 text-sm font-light text-gray-900">
-                  Status
-                </th>
-                <th className="pb-5 text-sm font-light text-gray-900">
-                  Promotion
-                </th>
-                <th className="pb-5 text-sm font-light text-gray-900">
-                  Country
-                </th>
-                <th className="pb-5 text-sm font-light text-gray-900">
-                  Joined date
-                </th>
-              </tr>
-            </thead>
-            <tbody></tbody>
-          </table>
+          <Table />
         </div>
       </main>
     </>
