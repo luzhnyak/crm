@@ -1,11 +1,31 @@
 import React, { FC, PropsWithChildren, ReactNode } from "react";
 import { ICompany } from "../types";
 import TableRow from "./TableRow";
+import { Status } from "./StatusLabel";
 
 interface IProps {
   children: ReactNode;
   data: ICompany[];
 }
+
+const data = [
+  {
+    category: "Products",
+    company: "Costco Wholesale",
+    status: Status.Active,
+    promotion: "Yes",
+    country: "USA",
+    joined_date: "19.02.2023",
+  },
+  {
+    category: "Products",
+    company: "Costco Wholesale",
+    status: Status.NotActive,
+    promotion: "Yes",
+    country: "USA",
+    joined_date: "19.02.2023",
+  },
+];
 
 const Table: FC = () => {
   return (
@@ -21,16 +41,9 @@ const Table: FC = () => {
         </tr>
       </thead>
       <tbody>
-        {
-          <TableRow
-            category="category"
-            company="company"
-            status="status"
-            promotion="promotion"
-            country="country"
-            joined_date="joined_date"
-          ></TableRow>
-        }
+        {data.map((rowData) => {
+          return <TableRow rowData={rowData}></TableRow>;
+        })}
       </tbody>
     </table>
   );
